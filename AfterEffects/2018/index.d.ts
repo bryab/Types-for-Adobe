@@ -2619,10 +2619,10 @@ declare class _TextMoreOptions extends PropertyGroup {
   readonly interCharacterBlending: Property
 }
 
-declare class CheckboxControlProperty extends PropertyGroup {
-	readonly checkbox: Property;
+declare class _CheckboxControl extends PropertyGroup {
+  readonly checkbox: Property
 }
 
-declare class SliderControlProperty extends PropertyGroup {
-	readonly slider: Property;
+declare class _SliderControl extends PropertyGroup {
+  readonly slider: Property
 }
