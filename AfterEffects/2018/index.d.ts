@@ -2637,5 +2637,7 @@ declare class _SliderControl extends PropertyGroup {
 }
 
 declare class _PointControl3D extends PropertyGroup {
-  readonly point: Property;
+  property(name: "3D Point"): Property
+  property(name: string): PropertyBase
+  property(index: number): PropertyBase
 }
