@@ -2020,7 +2020,13 @@ declare class PropertyGroup extends PropertyBase {
   canAddProperty(name: string): boolean
 
   /** Adds a property to the group. */
-  addProperty(name: string): PropertyBase
+  addProperty: _PropertyBaseAddProperty
+}
+
+interface _PropertyBaseAddProperty {
+  (name: string): PropertyBase,
+  (name: "Slider Control"): _SliderControl
+  (name: "3D Point Control"): _PointControl3D
 }
 
 /** The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. */
@@ -2619,10 +2625,17 @@ declare class _TextMoreOptions extends PropertyGroup {
   readonly interCharacterBlending: Property
 }
 
+/**
+ * Effects
+ */
 declare class _CheckboxControl extends PropertyGroup {
   readonly checkbox: Property
 }
 
 declare class _SliderControl extends PropertyGroup {
   readonly slider: Property
+}
+
+declare class _PointControl3D extends PropertyGroup {
+  readonly point: Property;
 }
